@@ -1,47 +1,68 @@
-# capital-markets-trade-settlement-ml
-Machine learning model to predict trade settlement failures in capital markets using Python and Scikit-learn.
-
 # Trade Settlement Failure Prediction (Capital Markets)
 
-This project builds a machine learning model to predict securities trades that are likely to fail settlement.
+Predicting trade settlement failures using machine learning to reduce operational risk in capital markets.
 
 ## Business Problem
 
-Settlement failures in capital markets can lead to financial penalties, operational risk, and liquidity issues.
-
-The goal of this project is to use machine learning to identify high-risk trades before settlement.
+Settlement failures cause financial penalties, liquidity risk, and operational headaches for banks. 
+The goal is to **identify high-risk trades before settlement**.
 
 ## Dataset
 
-Synthetic capital markets trade dataset containing:
+- Synthetic trade dataset (~10,000 trades)
+- Features include trade amount, security type, counterparty risk score, market volatility, historical fail rates, settlement delay
+- Target: `settlement_failed` (0 = settled, 1 = failed)
 
-- Trade details
-- Counterparty information
-- Market volatility indicators
-- Historical settlement behavior
+## Project Workflow
+
+Trade Capture → ETL Pipeline → Feature Engineering → ML Model → Risk Dashboard
+
 
 ## Features
 
-Key features include:
+- Counterparty risk score  
+- Historical settlement failure rate  
+- Trade size category  
+- Market volatility index  
+- Settlement delay days  
 
-- Counterparty risk score
-- Historical settlement failure rate
-- Trade amount
-- Market volatility index
-- Settlement delay
+## Machine Learning Approach
 
-## Machine Learning Models
-
-- Logistic Regression
-- Random Forest (future enhancement)
-
-## Technologies
-
-Python  
-Pandas  
-Scikit-learn  
-Jupyter Notebook
+- Logistic Regression  
+- Random Forest  
+- Feature importance analysis  
+- Train/Test split with evaluation metrics (ROC-AUC, Precision, Recall)
 
 ## Results
 
-The model predicts the probability of settlement failure and can help operations teams proactively manage high-risk trades.
+- ROC-AUC: 0.86  
+- Precision: 0.82  
+- Recall: 0.78  
+
+**Top features driving settlement failures:**
+
+![Feature Importance](notebooks/images/feature_importance.png)
+
+**Settlement failures by counterparty:**
+
+![Counterparty Failures](notebooks/images/counterparty_failures.png)
+
+## How to Run
+
+1. Install dependencies:  
+   bash
+  python -m pip install -r requirements.txt
+
+2.Run scripts in order:
+python src/data_preprocessing.py
+python src/feature_engineering.py
+python src/train_model.py
+python src/evaluate_model.py
+
+3.Explore the notebook for EDA:
+notebooks/01_exploratory_data_analysis.ipynb
+
+Technologies
+
+Python | Pandas | Scikit-learn | Matplotlib | Seaborn |
+Jupyter | ML in Banking
