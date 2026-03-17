@@ -7,6 +7,16 @@ Predicting trade settlement failures using machine learning to reduce operationa
 Settlement failures cause financial penalties, liquidity risk, and operational headaches for banks. 
 The goal is to **identify high-risk trades before settlement**.
 
+## Configuration Driven Pipeline
+
+The project uses a YAML-based configuration system to manage:
+
+- Data paths
+- Model parameters
+- Training settings
+
+This simulates real-world ML systems used in banking environments for scalability and maintainability.
+
 ## Dataset
 
 - Synthetic trade dataset (~10,000 trades)
