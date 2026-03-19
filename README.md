@@ -1,4 +1,4 @@
-![Trade Settlement ML](trade_settlement_banner_compressed.jpg)
+![Banner](images/trade_settlement_banner_compressed.jpg)
 
 # Trade Settlement Failure Prediction (Capital Markets)
 
