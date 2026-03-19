@@ -1,3 +1,5 @@
+![Trade Settlement ML](trade_settlement_banner_compressed.jpg)
+
 # Trade Settlement Failure Prediction (Capital Markets)
 
 Predicting trade settlement failures using machine learning to reduce operational risk in capital markets.
